@@ -11,7 +11,7 @@ app.use(expressValidator());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-var server = app.listen(3000, () => {
+var server = app.listen(process.env.port, () => {
     console.log("server listening to port 3000");
 })
 mongoose.connect(db.url, {
