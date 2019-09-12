@@ -23,10 +23,17 @@ class UserModel {
                 console.log("Error login",loginData);
                 return callback(err);
             }
+<<<<<<< HEAD
             if(data==null){
                return callback(null,"Invalid User")
             }
             else{
+=======
+            if(data!=null){
+            //    return callback(null,"Invalid User")
+            // }
+            // else{
+>>>>>>> 20b9f762dd54c70f2bbd443d2dc1ed3a3814a002
             return callback(null,data)
             }
         })
