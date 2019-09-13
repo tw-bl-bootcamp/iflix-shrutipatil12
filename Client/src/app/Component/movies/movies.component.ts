@@ -8,13 +8,13 @@ import { MatSnackBar } from '@angular/material';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
-movies:any[]=[];
+  movies: any[] = [];
 
-ngOnInit() {
-  this.allMovieShows();
-}
+  ngOnInit() {
+    this.allMovieShows();
+  }
   constructor(private userService: UsersService, private snackbar: MatSnackBar) { }
-  allMovieShows(){
+  allMovieShows() {
     this.userService.allMovieShows('movieShows').subscribe(
       (response: any) => {
         console.log(this.movies);
@@ -26,7 +26,7 @@ ngOnInit() {
 
       }
     );
-   }
+  }
 
 
 }
