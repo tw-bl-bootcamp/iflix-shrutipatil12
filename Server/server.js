@@ -16,14 +16,14 @@ app.use(bodyParser.urlencoded({
 var route = require('./Router/route');
 app.use('/', route);
 
-var port=process.env.port;
+var port = process.env.port;
 var server = app.listen(port, () => {
-    console.log("server listening to port",port);
+    console.log("server listening to port", port);
 })
 mongoose.connect(db.url, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    })
     .then(() => {
         console.log(" DB connected successfully");
     }).catch(err => {
@@ -31,4 +31,4 @@ mongoose.connect(db.url, {
         process.exit(0);
     })
 
-    module.exports=app;
+module.exports = app;
