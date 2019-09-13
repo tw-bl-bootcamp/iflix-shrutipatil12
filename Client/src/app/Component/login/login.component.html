@@ -1,7 +1,6 @@
 <div class="formsize" fxLayout="row" fxLayoutAlign="center center">
   <mat-card fxFlex="30">
     <div class="heading2" fxLayout="column" fxLayoutGap=20 fxLayoutAlign="center center">
-   
       <mat-card-title>
         <p>
           <span class="i">i</span>
@@ -16,7 +15,7 @@
     </div>
 
     <div fxLayout="column" fxLayoutAlign="center center">
-      <mat-form-field  appearance="outline">
+      <mat-form-field appearance="outline">
         <mat-label>Enter Your Email</mat-label>
         <input matInput placeholder="Email" name="email" type="text" [formControl]="email" required>
         <mat-icon matSuffix>email</mat-icon>
@@ -38,8 +37,5 @@
     <div class="button" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap=10%>
       <button mat-raised-button (click)="onClicked()">Login</button>
     </div>
-    <!-- <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap=55%>
-    </div> -->
-
   </mat-card>
 </div>
