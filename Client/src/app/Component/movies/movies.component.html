@@ -1,0 +1,15 @@
+<div fxFlex=100% fxLayout="row" fxLayoutAlign="center center">
+        <div fxFlex=80% fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap=10>
+            <div fxFlex=35% fxLayoutAlign="center center" *ngFor="let items of movies">
+                <mat-card class="noteMatcard" fxFlex="70">
+                    <div fxLayout="column">
+                        
+                            <mat-card-content>{{items.title}}</mat-card-content>
+                            <mat-card-content>movie rating {{items.rating}}</mat-card-content>
+                            <mat-card-content>movie review {{items.review}}</mat-card-content>
+                    
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+    </div>
