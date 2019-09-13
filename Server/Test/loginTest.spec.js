@@ -56,3 +56,16 @@ describe('Given correct login credentials while login When Pass To Logi
         })
     })
 })
+
+describe('Given empty request Url for Login API', () => {
+    it('It will return Status Code 404', (done) => {
+        let userData = {
+            email: "validinput@gmail.com",
+            password: "Abc@12345"
+        }
+        chai.request(server).post('').send(userData).end((err, res) => {
+            assert.equal(404, res.status);
+            done();
+        })
+    })
+})
