@@ -1,0 +1,20 @@
+{
+  "name": "iflix-shrutipatil12",
+  "version": "1.0.0",
+  "description": "iFlix is a movie booking app which allows users to select from a list of movie shows  and book any available seats using an intuitive online interface.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"concurrently \"cd Server && npm start\" \"cd Client && ng serve\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tw-bl-bootcamp/iflix-shrutipatil12.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tw-bl-bootcamp/iflix-shrutipatil12/issues"
+  },
+  "homepage": "https://github.com/tw-bl-bootcamp/iflix-shrutipatil12#readme"
+}
