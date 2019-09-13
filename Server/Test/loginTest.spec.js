@@ -69,3 +69,15 @@ describe('Given empty request Url for Login API', () => {
         })
     })
 })
+describe('Given invalid request Url for Login API', () => {
+    it('It will return Status Code 404', (done) => {
+        let userData = {
+            email: "validinput@gmail.com",
+            password: "Abc@abc12"
+        }
+        chai.request(server).post('/log').send(userData).end((err, res) => {
+            assert.equal(404, res.status);
+            done();
+        })
+    })
+})
