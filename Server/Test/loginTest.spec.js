@@ -44,3 +44,15 @@ describe('Given wrong format of email and password  while login When Pass To Log
         })
     })
 })
+describe('Given correct login credentials while login When Pass To Login API', () => {
+    it('It will return Status Code 200', (done) => {
+        let userData = {
+            email: "validinput@gmail.com",
+            password: "Abc@12345"
+        }
+        chai.request(server).post('/login').send(userData).end((err, res) => {
+            assert.equal(200, res.status);
+            done();
+        })
+    })
+})
